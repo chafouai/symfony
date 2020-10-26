@@ -19,7 +19,9 @@ class MainController extends AbstractController
         //     'path' => 'src/Controller/MainController.php',
         // ]);
 
-        return new Response('<h1>Welcome home</h1>');
+        //return new Response('<h1>Welcome home</h1>');
+
+        return $this->render('home/index.html.twig');
     }
 
     /** 
@@ -28,8 +30,12 @@ class MainController extends AbstractController
 
     public function custom(Request $request): Response {
         $name = $request->get('name');
-        dump($name);
-        return new Response('<h1>My custom page '. $name .'</h1>');
+        //dump($name);
+        //return new Response('<h1>My custom page '. $name .'</h1>');
+
+        return $this->render('home/custom.html.twig', [
+            'name' => $name
+        ]); 
     }
 
 
