@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Form\PostType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -67,6 +68,15 @@ class PostController extends AbstractController
     	$form->handleRequest($request);
 
     	if($form->isSubmitted() && $form->isValid()){
+
+            /** @var  UploadedFile $file */
+            $file = $request->files->get('post')['image'];
+    	    if($file){
+    	        $filename = md5(uniqid()). '.'. $file->guessClientExtension();
+    	        $file->move($this->getParameter('uploads_dir'), $filename);
+    	        $post->setImage($filename);
+            }
+
             // entity manager
             $em = $this->getDoctrine()->getManager();
             $em->persist($post);
