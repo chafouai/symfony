@@ -16,36 +16,28 @@ class PostController extends AbstractController
 {
     /**
      * @Route("/post", name="post.index")
-     */
-    public function index(): Response {
-        return $this->render('post/index.html.twig', [
-            'controller_name' => 'PostController',
-        ]);
-    }
-
-
-    /**
-     * @Route("post/all", name="post.all")
      * @param PostRepository $postRepository
      * @return Response
      */
-
-    public function all(PostRepository $postRepository): Response {
+    public function index(PostRepository $postRepository): Response {
         $posts = $postRepository->findAll();
 
         dump($posts);
 
-        return $this->render('post/all.html.twig', [
-        	'posts' => $posts
+        return $this->render('post/index.html.twig', [
+            'posts' => $posts
         ]);
 
     }
 
-    /**
-    * @Route("post/show/{id} ", name="post.show")
-    */
 
- 	//public function show(Post $post) {
+    /**
+     * @Route("post/show/{id} ", name="post.show")
+     * @param PostRepository $postRepository
+     * @return Response
+     */
+
+    //public function show(Post $post) {
     public function show($id, PostRepository $postRepository): Response  {
     	$post = $postRepository->find($id);
     	//dump($post); die();
@@ -82,7 +74,7 @@ class PostController extends AbstractController
             $em->persist($post);
             $em->flush();
             $this->addFlash('success', 'Post was created');
-            return $this->redirect($this->generateUrl('post.all'));
+            return $this->redirect($this->generateUrl('post.index'));
         }
 
 
@@ -104,13 +96,6 @@ class PostController extends AbstractController
 
  		$this->addFlash('success', 'Post was removed');
 
- 		return $this->redirect($this->generateUrl('post.all'));
+ 		return $this->redirect($this->generateUrl('post.index'));
  	}
-
-    /**
-     *
-     */
-    public function display(){
-
-    }
 }
