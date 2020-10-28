@@ -25,17 +25,35 @@ class MainController extends AbstractController
     }
 
     /** 
-     * @Route("/custom/{name?}", name="custom")
+     * @Route("/custom/{name?}/{page?}", name="custom", requirements={"page" = "\d+"}, defaults={"page": 1, "name": "Mohamed"})
      */
 
     public function custom(Request $request): Response {
         $name = $request->get('name');
+        $page = $request->get('page');
         //dump($name);
         //return new Response('<h1>My custom page '. $name .'</h1>');
 
         return $this->render('home/custom.html.twig', [
-            'name' => $name
+            'name' => $name,
+            'page' => $page
         ]); 
+    }
+
+    /**
+     * @Route("/custom/{name?}/{page}", name="custom_page_not_valid")
+     */
+
+    public function custom2(Request $request): Response {
+        $name = $request->get('name');
+        $page = "NOT VALID";
+        //dump($name);
+        //return new Response('<h1>My custom page '. $name .'</h1>');
+
+        return $this->render('home/custom.html.twig', [
+            'name' => $name,
+            'page' => $page
+        ]);
     }
 
 
