@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0607ff90-f476-4ff1-90cb-235f1d0cd34c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0607ff90-f476-4ff1-90cb-235f1d0cd34c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +95,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jSQ5BstUh8CnXgtWVnBaGma8x5" />
@@ -127,7 +126,7 @@
       <workItem from="1603794829726" duration="6463000" />
       <workItem from="1603808771300" duration="6191000" />
       <workItem from="1603875097758" duration="41000" />
-      <workItem from="1603875508915" duration="3799000" />
+      <workItem from="1603875508915" duration="4049000" />
     </task>
     <servers />
   </component>
