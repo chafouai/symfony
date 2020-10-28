@@ -26,6 +26,16 @@ class ProductController extends AbstractController
     }
 
     /**
+     * @Route("/json", name="product_json", methods={"GET"})
+     * @param ProductRepository $productRepository
+     * @return Response
+     */
+    public function getPostsJson(ProductRepository $productRepository) : Response{
+        $products = $productRepository->findAll();
+        return $this->json($products, 200, [], []);
+    }
+
+    /**
      * @Route("/new", name="product_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0607ff90-f476-4ff1-90cb-235f1d0cd34c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +99,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jSQ5BstUh8CnXgtWVnBaGma8x5" />
@@ -129,7 +130,7 @@
       <workItem from="1603794829726" duration="6463000" />
       <workItem from="1603808771300" duration="6191000" />
       <workItem from="1603875097758" duration="41000" />
-      <workItem from="1603875508915" duration="4360000" />
+      <workItem from="1603875508915" duration="6142000" />
     </task>
     <servers />
   </component>
@@ -137,10 +138,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="345" y="202" width="1067" height="642" key="find.popup" timestamp="1603882148636">
+    <state x="345" y="202" width="1067" height="642" key="find.popup" timestamp="1603900105280">
       <screen x="0" y="23" width="1680" height="959" />
     </state>
-    <state x="345" y="202" width="1067" height="642" key="find.popup/0.23.1680.959/1680.23.1920.1057@0.23.1680.959" timestamp="1603882148636" />
+    <state x="345" y="202" width="1067" height="642" key="find.popup/0.23.1680.959/1680.23.1920.1057@0.23.1680.959" timestamp="1603900105280" />
     <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1603816900101">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
