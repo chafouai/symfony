@@ -5,5 +5,5 @@
 	Category:<h1>{{ post.category }}</h1>
 	Image:
 	<hr>
-	<img src="{{ '/uploads/' ~  post.image }}" alt="">
+	<img src="{{ asset('/uploads/' ~ post.image )}}" alt="" />
 {% endblock %}
